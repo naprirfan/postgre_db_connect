@@ -1,0 +1,28 @@
+<% layout('/layout/master') -%>
+
+<div class="container">
+  <ol class="breadcrumb">
+    <li><a href="/">Home</a></li>
+    <li>Artists</li>
+  </ol>
+  <h1>Artists</h1>
+  <a class="btn btn-primary" href="/editRandomArtist"><i class="glyphicon glyphicon-plus"></i> Add new Artist</a>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ArtistId</th>
+        <th>Name</th>
+        <th>Skills</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% data.forEach(function(row) { %>
+        <tr>
+          <td><%= row.artistid %></td>
+          <td><%= row.artistname %></td>
+          <td><%= row.skillname %></td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</div>

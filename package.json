@@ -1,0 +1,25 @@
+{
+  "name": "postgre_db_connect",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "ejs-mate": "^2.3.0",
+    "express": "^4.14.0",
+    "massive": "^2.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/naprirfan/postgre_db_connect.git"
+  },
+  "author": "Muhammad Irfan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/naprirfan/postgre_db_connect/issues"
+  },
+  "homepage": "https://github.com/naprirfan/postgre_db_connect#readme"
+}
