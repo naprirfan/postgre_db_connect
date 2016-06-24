@@ -1,6 +1,6 @@
 -- This is an editArtist function
 -- This works by editing artists table field and also artistsSkills table
--- Returns 1 when succeed
+-- Returns RECORD when succeed
 -- Usage example:  SELECT editArtist('hello','markdown',100, array[1,2,3]);
 
 -- Drop function is useful when altering function's return type

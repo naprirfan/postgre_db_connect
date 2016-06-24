@@ -14,6 +14,7 @@ app.set('view engine', 'ejs');
 
 app.set('db', massiveInstance);
 
+// This query works
 app.get('/', function(req,res) {
   var db = req.app.get('db');
   var query = 'SELECT a.ArtistId as artistid, a.Name as artistname, ' + 
