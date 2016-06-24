@@ -8,7 +8,7 @@ DROP FUNCTION editArtist(varchar, varchar, integer, int[]);
 
 BEGIN;
 
-CREATE OR REPLACE FUNCTION editArtist (_artistname varchar, _infomarkdown varchar, _artistId integer, _artistSkills int[]) RETURNS RECORD as $$
+CREATE OR REPLACE FUNCTION editArtist (_artistname varchar, _infomarkdown varchar, _artistId integer, _artistSkills int[]) RETURNS integer as $$
   
   DECLARE
     i int;
@@ -28,9 +28,9 @@ CREATE OR REPLACE FUNCTION editArtist (_artistname varchar, _infomarkdown varcha
     END LOOP;
     
     -- Return record
-    SELECT * FROM Artists WHERE ArtistId = _artistId INTO result;
+    -- SELECT * FROM Artists WHERE ArtistId = _artistId INTO result;
     
-    RETURN result;
+    RETURN 1;
   END;
 
 $$ LANGUAGE plpgsql;

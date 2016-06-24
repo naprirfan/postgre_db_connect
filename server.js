@@ -30,6 +30,7 @@ app.get('/', function(req,res) {
 });
 
 // This is where I can't call the editArtist function
+// Here's the solution: https://github.com/robconery/massive-js/issues/271#issuecomment-228254778
 app.get('/editRandomArtist', function(req, res) {
   // Set variables
   var db = req.app.get('db');
@@ -37,7 +38,7 @@ app.get('/editRandomArtist', function(req, res) {
   // function's argument : ArtistName, InfoMarkdown, ArtistId, Skills
   var values = ['the name', 'some markdown', 100, [1,2,3]];
 
-  db.editArtist(values, function(err, result) {
+  db.editartist(values, function(err, result) {
     if (err) {
       console.log(err);
       res.status(500).end('Database query error');
